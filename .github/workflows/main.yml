@@ -1,0 +1,45 @@
+name: Deploiement # Nom de la tâche dans GitHub
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  Deploiement:
+    runs-on: ubuntu-latest # OS sur lequel va s’exécuter la tâche
+    steps:
+      - name: Check out repository code # récupération du dépôt GitHub dans la machine
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: 'sny1411/Portfolio-laravel.git'
+      - run: sudo apt update # On met à jour les listings des paquets
+      - run: sudo apt-get install rsync -y # On install rsync, nécessaire pour copier les assets vers le serveur web
+      - name: Setup PHP # Configuration de PHP sur la machine virtuelle
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2" # Je propose d’utiliser la version 8.2
+      - name: Install PHP dependencies # Installation des paquets composer
+        uses: "ramsey/composer-install@v1"
+        with:
+          dependency-versions: "locked" # Installation en utilisant le fichier composer.lock
+      - name: Setup Node # Installation de NodeJS sur la machine virtuelle
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Je propose d’utiliser la version 14
+      - name: Install Yarn # Installation de Yarn, gestionnaire de paquets plus rapide que npm
+        run: npm install -g yarn
+      - name: Install JS dependencies # Installation des dépendances de notre projet Laravel
+        run: yarn install
+      - name: Install SSH key # Configuration de la clé SSH permettant à la machine virtuelle de se connecter au serveur web
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SECRET_KEY }}
+          name: ${{ secrets.ID_RSA }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          if_key_exists: fail
+      - name: Deploiement # Exécution de Deployer. A partir de là, c’est le script créé dans la partie 1 de l’article qui prend le relais.
+        run: cd ${{ github.workspace }} && php vendor/bin/dep deploy ftp.mondomaine.com
