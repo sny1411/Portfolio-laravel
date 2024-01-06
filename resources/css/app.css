@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* assure que le contenu prend au moins 100% de la hauteur de la vue */
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+}
+
+/* header */
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* main content */
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-image: url("/public/images/background-index.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+}
+
+.social-menu {
+    width: 5rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.social-menu img {
+    width: 2rem;
+}
