@@ -105,7 +105,7 @@
     <section class="projects">
         <article>
             <h2>Portfolio</h2>
-            <img src="{{ Vite::asset("/resources/images/projects/portfolio.jpg") }}" alt="portfolio image">
+            <img src="{{ asset("images/projects/portfolio.jpg") }}" alt="portfolio image">
             <ul class="technos">
                 <li class="html">HTML</li>
                 <li class="css" >CSS</li>
@@ -116,7 +116,7 @@
         </article>
         <article>
             <h2>Marathon du web</h2>
-            <img src="{{ Vite::asset("/resources/images/projects/marathon.jpg") }}" alt="Marathon image">
+            <img src="{{ asset("images/projects/marathon.jpg") }}" alt="Marathon image">
             <ul class="technos">
                 <li class="html">HTML</li>
                 <li class="css">CSS</li>
@@ -127,7 +127,7 @@
         </article>
         <article>
             <h2>Bingo</h2>
-            <img src="{{ Vite::asset("/resources/images/projects/bingo.png") }}" alt="portfolio image">
+            <img src="{{ asset("images/projects/bingo.png") }}" alt="portfolio image">
             <ul class="technos">
                 <li class="java">Java</li>
                 <li class="maven" >Maven</li>
@@ -138,7 +138,7 @@
         </article>
         <article>
             <h2>Serveur minecraft</h2>
-            <img src="{{ Vite::asset("/resources/images/projects/minecraft.jpg") }}" alt="portfolio image">
+            <img src="{{ asset("images/projects/minecraft.jpg") }}" alt="portfolio image">
             <ul class="technos">
                 <li class="java">Java</li>
                 <li class="maven">Maven</li>
@@ -150,7 +150,7 @@
         </article>
         <article>
             <h2>Plus ou moins</h2>
-            <img src="{{ Vite::asset("/resources/images/projects/plusoumoins.png") }}" alt="portfolio image">
+            <img src="{{ asset("images/projects/plusoumoins.png") }}" alt="portfolio image">
             <ul class="technos">
                 <li class="ccc">C++</li>
             </ul>

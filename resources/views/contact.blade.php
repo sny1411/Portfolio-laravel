@@ -72,7 +72,7 @@
     <h1>Contact</h1>
     <section>
         <article class="aticlestyle">
-            <img class="matteohumez" src="{{ Vite::asset('/resources/images/matteohumez.jfif') }}" alt="matteo humez">
+            <img class="matteohumez" src="{{ asset('images/matteohumez.jfif') }}" alt="matteo humez">
             <p>
                 Je suis étudiant à l'iut de Lens en 2ème année d'informatique,
                 passionné par le développement d'applications.
@@ -85,9 +85,9 @@
                 ou via les réseaux sociaux.</p>
             <aside class="social-menu">
                 <a href="https://github.com/sny1411" target="_blank">
-                    <img src="{{ Vite::asset('/resources/images/logos/github.svg') }}" alt="github logo"></a>
+                    <img src="{{ asset('images/logos/github.svg') }}" alt="github logo"></a>
                 <a href="https://www.linkedin.com/in/matteohumez/" target="_blank">
-                    <img src="{{ Vite::asset('/resources/images/logos/linkedin.svg') }}" alt="linkedin logo"></a>
+                    <img src="{{ asset('images/logos/linkedin.svg') }}" alt="linkedin logo"></a>
             </aside>
         </article>
     </section>
