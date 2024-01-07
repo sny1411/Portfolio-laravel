@@ -98,6 +98,11 @@
                 height: auto;
             }
         }
+
+        a {
+            text-decoration: none;
+            color: #fdfdfd;;
+        }
     </style>
 
     <h1>Mes projets</h1>
@@ -112,7 +117,7 @@
                 <li class="php" >PHP</li>
                 <li class="laravel">Laravel</li>
             </ul>
-            <button><a>En savoir plus</a></button>
+            <button><a href="{{ route('portfolio') }}">En savoir plus</a></button>
         </article>
         <article>
             <h2>Marathon du web</h2>
@@ -123,7 +128,7 @@
                 <li class="php">PHP</li>
                 <li class="laravel">Laravel</li>
             </ul>
-            <button><a>En savoir plus</a></button>
+            <button><a href="{{ route('marathon') }}">En savoir plus</a></button>
         </article>
         <article>
             <h2>Bingo</h2>
@@ -134,10 +139,10 @@
                 <li class="minecraft">Minecraft</li>
                 <li class="papermc">PaperMc</li>
             </ul>
-            <button><a>En savoir plus</a></button>
+            <button><a href="https://github.com/sny1411/Bingo" target="_blank">En savoir plus</a></button>
         </article>
         <article>
-            <h2>Serveur minecraft</h2>
+            <h2>Serveur Minecraft</h2>
             <img src="{{ asset("images/projects/minecraft.jpg") }}" alt="portfolio image">
             <ul class="technos">
                 <li class="java">Java</li>
@@ -146,7 +151,7 @@
                 <li class="papermc">PaperMc</li>
                 <li class="mysql">Mysql</li>
             </ul>
-            <button><a>En savoir plus</a></button>
+            <button><a href="{{ route('minecraft') }}">En savoir plus</a></button>
         </article>
         <article>
             <h2>Plus ou moins</h2>
@@ -154,7 +159,7 @@
             <ul class="technos">
                 <li class="ccc">C++</li>
             </ul>
-            <button><a>En savoir plus</a></button>
+            <button><a href="{{ route('plusoumoins') }}">En savoir plus</a></button>
         </article>
     </section>
 @endsection

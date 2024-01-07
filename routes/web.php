@@ -28,3 +28,19 @@ Route::get('/projets', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name("contact");
+
+Route::get('/projets/minecraft', function () {
+    return view('projets.minecraft');
+})->name("minecraft");
+
+Route::get('/projets/portfolio', function () {
+    return view('projets.portfolio');
+})->name("portfolio");
+
+Route::get('/projets/marathon', function () {
+    return view('projets.marathon');
+})->name("marathon");
+
+Route::get('/projets/plusoumoins', function () {
+    return view('projets.plusoumoins');
+})->name("plusoumoins");
