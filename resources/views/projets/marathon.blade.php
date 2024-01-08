@@ -64,7 +64,7 @@
     <div>
         <p>
             Ce projet est un événement organisé par l'IUT de Lens.
-            Il consiste à développer un site web complet en 36 heures.
+            Il consiste à développer un site web complet en 33 heures.
         </p>
         <p>
             Pour cela, le département MMI (Métiers du Multimédia et de l'Internet) s'est joint à nous.
